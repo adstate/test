@@ -74,7 +74,7 @@ class Observable {
           } else {
             listener.oldValue = curValue;
           }
-          // need to start new job if there is not current job
+          // need to start new job if there is no current job
           listener.job = setTimeout(function callListenerAsync() {
             listener.job = null;
             callListener(listener.oldValue);
