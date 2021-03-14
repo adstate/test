@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-secondary: #e3e3e3;
+            
+            --font-size-base: 16px;
+            --font-size-m: 1.25rem;
+            --font-size-l: 2.25rem;
+
+            --space-m: 20px;
+            --space-l: 50px;
+
+            --header-title-font-size: var(--font-size-m);
+            --header-time-font-size: var(--font-size-l);
+            --header-bg-color: var(--color-secondary);
+            --header-min-space: var(--space-l);
+            --header-height: 64px;
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: var(--font-size-base);
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: var(--header-height);
+            padding: 0 var(--space-m);
+            background-color: var(--header-bg-color);
+        }
+
+        .header__title {
+            font-family: Roboto;
+            font-weight: bold;
+            font-size: var(--header-title-font-size);
+        }
+
+        .header__time {
+            font-family: Roboto;
+            font-size: var(--header-time-font-size);
+        }
+
+        .header__space {
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: var(--header-min-space);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header__title">
+            Welcome, username!
+        </div>
+
+        <div class="header__space"></div>
+
+        <div class="header__time">
+            11:41 MSK
+        </div>
+
+    </header>
+</body>
+</html>
